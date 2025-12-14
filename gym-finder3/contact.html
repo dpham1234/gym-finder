@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Gym Finder Vancouver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" style="display: flex; flex-direction: column; gap: 4px; text-decoration: none;">
+                    <img src="logo.png" alt="Gym Finder Logo" class="logo-img">
+                    <span class="tagline">Your Vancouver Fitness Guide</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#gyms" class="nav-link">Browse Gyms</a></li>
+                    <li><a href="compare.html" class="nav-link">Compare</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="cta-nav">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="gym3.jpeg" alt="Vancouver Gym" class="hero-bg">
+        <div class="hero-container">
+            <h1>Get In <span class="highlight">Touch</span></h1>
+            <p class="hero-lead">Have questions? We're here to help you find your perfect gym</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="gym-section">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 1200px; margin: 0 auto;">
+            <!-- Contact Form -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 48px;">
+                <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 12px;">Send Us a Message</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 16px;">
+                    Fill out the form below and we'll get back to you within 24 hours.
+                </p>
+                
+                <form style="display: flex; flex-direction: column; gap: 24px;">
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Name</label>
+                        <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Email</label>
+                        <input type="email" placeholder="your.email@example.com" style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Subject</label>
+                        <select style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; cursor: pointer; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
+                            <option>General Inquiry</option>
+                            <option>Gym Listing Request</option>
+                            <option>Report Inaccurate Information</option>
+                            <option>Partnership Opportunity</option>
+                            <option>Technical Support</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Message</label>
+                        <textarea placeholder="Tell us how we can help..." rows="6" style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; resize: vertical; font-family: inherit; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 8px;">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 48px; margin-bottom: 24px;">
+                    <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 32px;">Contact Information</h2>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 32px;">
+                        <div style="display: flex; gap: 20px; align-items: flex-start;">
+                            <div style="font-size: 32px; flex-shrink: 0;">📧</div>
+                            <div>
+                                <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">Email</h3>
+                                <p style="color: var(--text-secondary); margin-bottom: 4px;">info@gymfinder.ca</p>
+                                <p style="color: var(--text-secondary); font-size: 14px;">support@gymfinder.ca</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 20px; align-items: flex-start;">
+                            <div style="font-size: 32px; flex-shrink: 0;">📞</div>
+                            <div>
+                                <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">Phone</h3>
+                                <p style="color: var(--text-secondary); margin-bottom: 4px;">(604) 555-0123</p>
+                                <p style="color: var(--text-secondary); font-size: 14px;">Mon-Fri: 9am-6pm PST</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 20px; align-items: flex-start;">
+                            <div style="font-size: 32px; flex-shrink: 0;">📍</div>
+                            <div>
+                                <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">Address</h3>
+                                <p style="color: var(--text-secondary); margin-bottom: 4px;">1234 Fitness Street</p>
+                                <p style="color: var(--text-secondary);">Vancouver, BC V6B 1A1</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 20px; align-items: flex-start;">
+                            <div style="font-size: 32px; flex-shrink: 0;">⏰</div>
+                            <div>
+                                <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">Business Hours</h3>
+                                <p style="color: var(--text-secondary); margin-bottom: 4px;">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p style="color: var(--text-secondary);">Saturday - Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Help -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 48px;">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 24px;">Quick Help</h3>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <a href="faq.html" style="padding: 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-primary); transition: all 0.3s ease; display: flex; align-items: center; gap: 12px;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-light)'">
+                            <span style="font-size: 24px;">❓</span>
+                            <span>Frequently Asked Questions</span>
+                        </a>
+                        <a href="about.html" style="padding: 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-primary); transition: all 0.3s ease; display: flex; align-items: center; gap: 12px;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-light)'">
+                            <span style="font-size: 24px;">ℹ️</span>
+                            <span>Learn More About Us</span>
+                        </a>
+                        <a href="index.html#gyms" style="padding: 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-primary); transition: all 0.3s ease; display: flex; align-items: center; gap: 12px;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-light)'">
+                            <span style="font-size: 24px;">🏋️</span>
+                            <span>Browse All Gyms</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="logo.png" alt="Gym Finder" class="footer-logo">
+                    <p>Vancouver's most comprehensive gym comparison platform. Find, compare, and join your perfect fitness home.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘 Facebook</a>
+                        <a href="#" class="social-icon">📸 Instagram</a>
+                        <a href="#" class="social-icon">🐦 Twitter</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#gyms">Browse All Gyms</a></li>
+                        <li><a href="compare.html">Compare Prices</a></li>
+                        <li><a href="index.html#neighborhoods">By Neighborhood</a></li>
+                        <li><a href="index.html#amenities">By Amenities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Fitness Blog</a></li>
+                        <li><a href="index.html#guides">Gym Guides</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li>📧 info@gymfinder.ca</li>
+                        <li>📞 (604) 555-0123</li>
+                        <li>📍 Vancouver, BC</li>
+                        <li>⏰ Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gym Finder Vancouver. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

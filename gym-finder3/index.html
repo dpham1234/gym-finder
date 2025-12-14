@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Finder Vancouver - Version 2 (Complete Redesign)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Completely Different Header Layout -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="logo.png" alt="Gym Finder Logo" class="logo-img">
+                <span class="tagline">Your Vancouver Fitness Guide</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#gyms" class="nav-link">Browse Gyms</a></li>
+                    <li><a href="compare.html" class="nav-link">Compare</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="cta-nav">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Completely New Hero - Full Width with Overlay -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="gym1.jpeg" alt="Vancouver Gym" class="hero-bg">
+        <div class="hero-container">
+            <div class="hero-badge">🏋️ #1 Gym Finder in Vancouver</div>
+            <h1>Discover Your Ideal<br><span class="highlight">Fitness Home</span></h1>
+            <p class="hero-lead">Compare prices, locations, and amenities at 50+ gyms across Metro Vancouver</p>
+            
+            <div class="search-wrapper">
+                <div class="search-container">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM18 18l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" placeholder="Search gyms, neighborhoods, or activities...">
+                    <button class="search-btn">Search</button>
+                </div>
+                <div class="quick-filters">
+                    <button class="filter-tag">🏊 With Pool</button>
+                    <button class="filter-tag">💰 Under $50/mo</button>
+                    <button class="filter-tag">⏰ 24/7 Access</button>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Gyms Listed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Happy Members</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Filter Bar -->
+    <section class="filter-bar">
+        <div class="filter-container">
+            <span class="filter-label">Filter by:</span>
+            <select class="filter-select">
+                <option>All Neighborhoods</option>
+                <option>Downtown</option>
+                <option>Yaletown</option>
+                <option>Mount Pleasant</option>
+                <option>North Vancouver</option>
+            </select>
+            <select class="filter-select">
+                <option>Price Range</option>
+                <option>Under $20/month</option>
+                <option>$20-$50/month</option>
+                <option>$50-$100/month</option>
+                <option>$100+/month</option>
+            </select>
+            <select class="filter-select">
+                <option>Amenities</option>
+                <option>Pool</option>
+                <option>Sauna</option>
+                <option>Group Classes</option>
+                <option>Personal Training</option>
+            </select>
+            <button class="reset-filters">Reset Filters</button>
+        </div>
+    </section>
+
+    <!-- Completely Redesigned Gym Cards Section -->
+    <section class="gym-section" id="gyms">
+        <div class="section-header">
+            <div class="section-title-group">
+                <h2>Top Rated Gyms</h2>
+                <p class="section-description">Hand-picked fitness centers with verified pricing and amenities</p>
+            </div>
+            <div class="view-toggle">
+                <button class="toggle-btn active">Grid View</button>
+                <button class="toggle-btn">List View</button>
+            </div>
+        </div>
+        
+        <div class="gym-grid">
+            <!-- Card 1 - Featured Layout -->
+            <div class="gym-card featured">
+                <div class="card-badge featured-badge">⭐ Featured</div>
+                <div class="gym-image-container">
+                    <img src="gym2.jpeg" alt="Steve Nash Fitness">
+                    <div class="image-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gym-content">
+                    <div class="gym-header">
+                        <div>
+                            <h3>Steve Nash Fitness</h3>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(245 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    
+                    <p class="location">📍 Downtown, Yaletown • 2 locations</p>
+                    
+                    <div class="pricing-grid">
+                        <div class="price-card">
+                            <div class="price-type">Drop-in</div>
+                            <div class="price-amount">$25</div>
+                            <div class="price-note">per visit</div>
+                        </div>
+                        <div class="price-card highlight">
+                            <div class="price-type">Monthly</div>
+                            <div class="price-amount">$69-89</div>
+                            <div class="price-note">best value</div>
+                        </div>
+                    </div>
+                    
+                    <div class="amenities-tags">
+                        <span class="amenity-tag">🏊 Pool</span>
+                        <span class="amenity-tag">🧖 Sauna</span>
+                        <span class="amenity-tag">👶 Childcare</span>
+                        <span class="amenity-tag">+3 more</span>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <a href="gym-details.html" class="btn-primary" style="text-decoration: none; text-align: center;">View Details</a>
+                        <a href="compare.html" class="btn-secondary" style="text-decoration: none; text-align: center; display: block;">Compare</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym3.jpeg" alt="GoodLife Fitness">
+                    <div class="image-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gym-content">
+                    <div class="gym-header">
+                        <div>
+                            <h3>GoodLife Fitness</h3>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(189 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    
+                    <p class="location">📍 Metrotown, Commercial • 3 locations</p>
+                    
+                    <div class="pricing-grid">
+                        <div class="price-card">
+                            <div class="price-type">Drop-in</div>
+                            <div class="price-amount">$20</div>
+                            <div class="price-note">per visit</div>
+                        </div>
+                        <div class="price-card highlight">
+                            <div class="price-type">Monthly</div>
+                            <div class="price-amount">$59-79</div>
+                            <div class="price-note">popular</div>
+                        </div>
+                    </div>
+                    
+                    <div class="amenities-tags">
+                        <span class="amenity-tag">🏋️ Weights</span>
+                        <span class="amenity-tag">🏃 Cardio</span>
+                        <span class="amenity-tag">👥 Classes</span>
+                        <span class="amenity-tag">+2 more</span>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <a href="gym-details.html" class="btn-primary" style="text-decoration: none; text-align: center;">View Details</a>
+                        <a href="compare.html" class="btn-secondary" style="text-decoration: none; text-align: center; display: block;">Compare</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym4.jpeg" alt="The Hive Climbing">
+                    <div class="image-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gym-content">
+                    <div class="gym-header">
+                        <div>
+                            <h3>The Hive Climbing</h3>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(312 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    
+                    <p class="location">📍 North Vancouver • 1 location</p>
+                    
+                    <div class="pricing-grid">
+                        <div class="price-card">
+                            <div class="price-type">Drop-in</div>
+                            <div class="price-amount">$24</div>
+                            <div class="price-note">per visit</div>
+                        </div>
+                        <div class="price-card highlight">
+                            <div class="price-type">Monthly</div>
+                            <div class="price-amount">$95</div>
+                            <div class="price-note">unlimited</div>
+                        </div>
+                    </div>
+                    
+                    <div class="amenities-tags">
+                        <span class="amenity-tag">🧗 Bouldering</span>
+                        <span class="amenity-tag">🎯 Top Rope</span>
+                        <span class="amenity-tag">🧘 Yoga</span>
+                        <span class="amenity-tag">+2 more</span>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <a href="gym-details.html" class="btn-primary" style="text-decoration: none; text-align: center;">View Details</a>
+                        <a href="compare.html" class="btn-secondary" style="text-decoration: none; text-align: center; display: block;">Compare</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym5.jpeg" alt="YMCA Vancouver">
+                    <div class="image-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gym-content">
+                    <div class="gym-header">
+                        <div>
+                            <h3>YMCA Vancouver</h3>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(156 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    
+                    <p class="location">📍 Downtown, Langara • 2 locations</p>
+                    
+                    <div class="pricing-grid">
+                        <div class="price-card">
+                            <div class="price-type">Drop-in</div>
+                            <div class="price-amount">$18</div>
+                            <div class="price-note">per visit</div>
+                        </div>
+                        <div class="price-card highlight">
+                            <div class="price-type">Monthly</div>
+                            <div class="price-amount">$65</div>
+                            <div class="price-note">family friendly</div>
+                        </div>
+                    </div>
+                    
+                    <div class="amenities-tags">
+                        <span class="amenity-tag">🏊 Pool</span>
+                        <span class="amenity-tag">🏀 Courts</span>
+                        <span class="amenity-tag">👨‍👩‍👧‍👦 Programs</span>
+                        <span class="amenity-tag">+3 more</span>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <a href="gym-details.html" class="btn-primary" style="text-decoration: none; text-align: center;">View Details</a>
+                        <a href="compare.html" class="btn-secondary" style="text-decoration: none; text-align: center; display: block;">Compare</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 - Best Value -->
+            <div class="gym-card value">
+                <div class="card-badge value-badge">💰 Best Value</div>
+                <div class="gym-image-container">
+                    <img src="gym1.jpeg" alt="Fit4Less">
+                    <div class="image-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gym-content">
+                    <div class="gym-header">
+                        <div>
+                            <h3>Fit4Less</h3>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(423 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    
+                    <p class="location">📍 East Vancouver, Surrey • 4 locations</p>
+                    
+                    <div class="pricing-grid">
+                        <div class="price-card">
+                            <div class="price-type">Drop-in</div>
+                            <div class="price-amount">$15</div>
+                            <div class="price-note">lowest price</div>
+                        </div>
+                        <div class="price-card highlight">
+                            <div class="price-type">Monthly</div>
+                            <div class="price-amount">$10-20</div>
+                            <div class="price-note">budget pick!</div>
+                        </div>
+                    </div>
+                    
+                    <div class="amenities-tags">
+                        <span class="amenity-tag">⏰ 24/7</span>
+                        <span class="amenity-tag">🏋️ Weights</span>
+                        <span class="amenity-tag">🏃 Cardio</span>
+                        <span class="amenity-tag">+1 more</span>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <a href="gym-details.html" class="btn-primary" style="text-decoration: none; text-align: center;">View Details</a>
+                        <a href="compare.html" class="btn-secondary" style="text-decoration: none; text-align: center; display: block;">Compare</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym3.jpeg" alt="CrossFit Vancouver">
+                    <div class="image-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gym-content">
+                    <div class="gym-header">
+                        <div>
+                            <h3>CrossFit Vancouver</h3>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(198 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    
+                    <p class="location">📍 Mount Pleasant • 1 location</p>
+                    
+                    <div class="pricing-grid">
+                        <div class="price-card">
+                            <div class="price-type">Drop-in</div>
+                            <div class="price-amount">$30</div>
+                            <div class="price-note">per class</div>
+                        </div>
+                        <div class="price-card highlight">
+                            <div class="price-type">Monthly</div>
+                            <div class="price-amount">$225</div>
+                            <div class="price-note">unlimited</div>
+                        </div>
+                    </div>
+                    
+                    <div class="amenities-tags">
+                        <span class="amenity-tag">🏋️ Olympic</span>
+                        <span class="amenity-tag">👥 Coach-Led</span>
+                        <span class="amenity-tag">🤝 Community</span>
+                        <span class="amenity-tag">+2 more</span>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <a href="gym-details.html" class="btn-primary" style="text-decoration: none; text-align: center;">View Details</a>
+                        <a href="compare.html" class="btn-secondary" style="text-decoration: none; text-align: center; display: block;">Compare</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more">
+            <button class="load-more-btn">Load More Gyms</button>
+            <p class="results-count">Showing 6 of 50+ gyms</p>
+        </div>
+    </section>
+
+    <!-- New CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Can't Find What You're Looking For?</h2>
+            <p>Let us help you find the perfect gym based on your specific needs and budget.</p>
+            <button class="cta-button">Get Personalized Recommendations</button>
+        </div>
+    </section>
+
+    <!-- Redesigned Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="logo.png" alt="Gym Finder" class="footer-logo">
+                    <p>Vancouver's most comprehensive gym comparison platform. Find, compare, and join your perfect fitness home.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘 Facebook</a>
+                        <a href="#" class="social-icon">📸 Instagram</a>
+                        <a href="#" class="social-icon">🐦 Twitter</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#gyms">Browse All Gyms</a></li>
+                        <li><a href="compare.html">Compare Prices</a></li>
+                        <li><a href="index.html#neighborhoods">By Neighborhood</a></li>
+                        <li><a href="index.html#amenities">By Amenities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Fitness Blog</a></li>
+                        <li><a href="index.html#guides">Gym Guides</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li>📧 info@gymfinder.ca</li>
+                        <li>📞 (604) 555-0123</li>
+                        <li>📍 Vancouver, BC</li>
+                        <li>⏰ Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gym Finder Vancouver. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

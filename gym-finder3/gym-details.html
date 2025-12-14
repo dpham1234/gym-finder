@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve Nash Fitness - Gym Finder Vancouver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" style="display: flex; flex-direction: column; gap: 4px; text-decoration: none;">
+                    <img src="logo.png" alt="Gym Finder Logo" class="logo-img">
+                    <span class="tagline">Your Vancouver Fitness Guide</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#gyms" class="nav-link">Browse Gyms</a></li>
+                    <li><a href="compare.html" class="nav-link">Compare</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="cta-nav">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gym Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-overlay"></div>
+        <img src="gym2.jpeg" alt="Steve Nash Fitness" class="hero-bg">
+        <div class="hero-container" style="text-align: left; max-width: 1200px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;">
+                <div style="flex: 1;">
+                    <div class="hero-badge" style="margin-bottom: 20px;">⭐ Featured Gym</div>
+                    <h1 style="text-align: left; margin-bottom: 16px;">Steve Nash Fitness</h1>
+                    <div style="display: flex; gap: 24px; align-items: center; margin-bottom: 24px;">
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(245 reviews)</span>
+                        </div>
+                        <span style="color: var(--text-secondary);">📍 Downtown, Yaletown • 2 locations</span>
+                    </div>
+                    <p class="hero-lead" style="text-align: left; margin-bottom: 0;">
+                        Premium fitness facilities with pool, sauna, and comprehensive amenities. 
+                        Perfect for families and serious fitness enthusiasts.
+                    </p>
+                </div>
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; min-width: 300px;">
+                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px;">Pricing</h3>
+                    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+                        <div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Drop-in</div>
+                            <div style="font-size: 32px; font-weight: 800; color: var(--primary-accent);">$25</div>
+                            <div style="font-size: 12px; color: var(--text-muted);">per visit</div>
+                        </div>
+                        <div style="border-top: 1px solid var(--border-color); padding-top: 16px;">
+                            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Monthly</div>
+                            <div style="font-size: 32px; font-weight: 800; color: var(--primary-accent);">$69-89</div>
+                            <div style="font-size: 12px; color: var(--text-muted);">best value</div>
+                        </div>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; margin-bottom: 12px;">Contact Gym</button>
+                    <button class="btn-secondary" style="width: 100%;">Add to Compare</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gym Details Section -->
+    <section class="gym-section">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Amenities -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 48px; margin-bottom: 32px;">
+                <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 32px;">Amenities & Features</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">🏊</span>
+                        <span style="font-weight: 600;">Olympic Pool</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">🧖</span>
+                        <span style="font-weight: 600;">Sauna & Steam Room</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">👶</span>
+                        <span style="font-weight: 600;">Childcare Services</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">🏋️</span>
+                        <span style="font-weight: 600;">Full Weight Room</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">🏃</span>
+                        <span style="font-weight: 600;">Cardio Equipment</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">👥</span>
+                        <span style="font-weight: 600;">Group Classes</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">💪</span>
+                        <span style="font-weight: 600;">Personal Training</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">⏰</span>
+                        <span style="font-weight: 600;">24/7 Access</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">🚗</span>
+                        <span style="font-weight: 600;">Parking Available</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 24px;">🚿</span>
+                        <span style="font-weight: 600;">Locker Rooms</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Locations -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 48px; margin-bottom: 32px;">
+                <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 32px;">Locations</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                    <div style="padding: 24px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 12px;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">Downtown Location</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px;">1234 Main Street, Vancouver, BC</p>
+                        <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 8px;">⏰ Mon-Fri: 5am-11pm</p>
+                        <p style="color: var(--text-secondary); font-size: 14px;">Sat-Sun: 7am-9pm</p>
+                    </div>
+                    <div style="padding: 24px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 12px;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">Yaletown Location</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px;">5678 Hamilton Street, Vancouver, BC</p>
+                        <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 8px;">⏰ Mon-Fri: 5am-11pm</p>
+                        <p style="color: var(--text-secondary); font-size: 14px;">Sat-Sun: 7am-9pm</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 48px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+                    <h2 style="font-size: 36px; font-weight: 800;">Reviews</h2>
+                    <button class="btn-secondary">Write a Review</button>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 24px;">
+                    <div style="padding: 24px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 12px;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                            <div>
+                                <div style="font-weight: 700; margin-bottom: 4px;">Sarah M.</div>
+                                <div class="rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="rating-count" style="margin-left: 8px;">2 weeks ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Amazing facility! The pool is pristine and the staff is incredibly friendly. 
+                            The childcare service is a lifesaver - my kids love it here. Worth every penny.
+                        </p>
+                    </div>
+                    
+                    <div style="padding: 24px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 12px;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                            <div>
+                                <div style="font-weight: 700; margin-bottom: 4px;">Mike T.</div>
+                                <div class="rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="rating-count" style="margin-left: 8px;">1 month ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Best gym in downtown Vancouver. Equipment is always clean and well-maintained. 
+                            The 24/7 access is perfect for my schedule. Highly recommend!
+                        </p>
+                    </div>
+                    
+                    <div style="padding: 24px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 12px;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                            <div>
+                                <div style="font-weight: 700; margin-bottom: 4px;">Jennifer L.</div>
+                                <div class="rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-count" style="margin-left: 8px;">2 months ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Great gym with excellent amenities. The group classes are fantastic. 
+                            Only downside is parking can be a bit pricey, but the location is convenient.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 32px;">
+                    <button class="load-more-btn">Load More Reviews</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="logo.png" alt="Gym Finder" class="footer-logo">
+                    <p>Vancouver's most comprehensive gym comparison platform. Find, compare, and join your perfect fitness home.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘 Facebook</a>
+                        <a href="#" class="social-icon">📸 Instagram</a>
+                        <a href="#" class="social-icon">🐦 Twitter</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#gyms">Browse All Gyms</a></li>
+                        <li><a href="compare.html">Compare Prices</a></li>
+                        <li><a href="index.html#neighborhoods">By Neighborhood</a></li>
+                        <li><a href="index.html#amenities">By Amenities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Fitness Blog</a></li>
+                        <li><a href="index.html#guides">Gym Guides</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li>📧 info@gymfinder.ca</li>
+                        <li>📞 (604) 555-0123</li>
+                        <li>📍 Vancouver, BC</li>
+                        <li>⏰ Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gym Finder Vancouver. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

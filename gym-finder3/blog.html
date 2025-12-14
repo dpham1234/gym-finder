@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Blog - Gym Finder Vancouver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" style="display: flex; flex-direction: column; gap: 4px; text-decoration: none;">
+                    <img src="logo.png" alt="Gym Finder Logo" class="logo-img">
+                    <span class="tagline">Your Vancouver Fitness Guide</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#gyms" class="nav-link">Browse Gyms</a></li>
+                    <li><a href="compare.html" class="nav-link">Compare</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="cta-nav">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="gym5.jpeg" alt="Vancouver Gym" class="hero-bg">
+        <div class="hero-container">
+            <h1>Fitness <span class="highlight">Blog</span></h1>
+            <p class="hero-lead">Tips, guides, and insights to help you on your fitness journey</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="gym-section">
+        <div class="section-header">
+            <div class="section-title-group">
+                <h2>Latest Articles</h2>
+                <p class="section-description">Expert advice and practical tips for your fitness goals</p>
+            </div>
+        </div>
+
+        <div class="gym-grid" style="grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));">
+            <!-- Blog Post 1 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym1.jpeg" alt="How to Choose a Gym">
+                </div>
+                <div class="gym-content">
+                    <div style="font-size: 12px; color: var(--primary-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Gym Guide</div>
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">How to Choose the Right Gym for You</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Finding the perfect gym isn't just about price. Learn what factors matter most when 
+                        selecting your fitness home, from location to amenities to community vibe.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-size: 14px; color: var(--text-muted);">March 15, 2024</span>
+                        <span style="font-size: 14px; color: var(--text-muted);">5 min read</span>
+                    </div>
+                    <button class="btn-primary" style="width: 100%;">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym2.jpeg" alt="Budget-Friendly Gyms">
+                </div>
+                <div class="gym-content">
+                    <div style="font-size: 12px; color: var(--primary-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Budget Tips</div>
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Best Budget-Friendly Gyms in Vancouver</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        You don't need to break the bank to stay fit. Discover affordable gym options across 
+                        Metro Vancouver that offer great value without compromising on quality.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-size: 14px; color: var(--text-muted);">March 8, 2024</span>
+                        <span style="font-size: 14px; color: var(--text-muted);">7 min read</span>
+                    </div>
+                    <button class="btn-primary" style="width: 100%;">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym3.jpeg" alt="Gym Etiquette">
+                </div>
+                <div class="gym-content">
+                    <div style="font-size: 12px; color: var(--primary-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Etiquette</div>
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Gym Etiquette 101: Do's and Don'ts</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Make the gym a better place for everyone. Learn the unwritten rules of gym etiquette 
+                        that will make you a welcome member of any fitness community.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-size: 14px; color: var(--text-muted);">March 1, 2024</span>
+                        <span style="font-size: 14px; color: var(--text-muted);">4 min read</span>
+                    </div>
+                    <button class="btn-primary" style="width: 100%;">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Post 4 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym4.jpeg" alt="Home vs Gym">
+                </div>
+                <div class="gym-content">
+                    <div style="font-size: 12px; color: var(--primary-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Comparison</div>
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Home Workouts vs. Gym Membership: Which is Better?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Weighing the pros and cons of working out at home versus joining a gym. 
+                        Find out which option aligns best with your lifestyle and fitness goals.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-size: 14px; color: var(--text-muted);">February 22, 2024</span>
+                        <span style="font-size: 14px; color: var(--text-muted);">6 min read</span>
+                    </div>
+                    <button class="btn-primary" style="width: 100%;">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Post 5 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym5.jpeg" alt="First Time at Gym">
+                </div>
+                <div class="gym-content">
+                    <div style="font-size: 12px; color: var(--primary-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Beginner's Guide</div>
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Your First Time at the Gym: A Complete Guide</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        New to the gym? Don't worry! This comprehensive guide covers everything you need to know 
+                        for your first visit, from what to bring to basic workout routines.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-size: 14px; color: var(--text-muted);">February 15, 2024</span>
+                        <span style="font-size: 14px; color: var(--text-muted);">8 min read</span>
+                    </div>
+                    <button class="btn-primary" style="width: 100%;">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Post 6 -->
+            <div class="gym-card">
+                <div class="gym-image-container">
+                    <img src="gym1.jpeg" alt="Gym Contracts">
+                </div>
+                <div class="gym-content">
+                    <div style="font-size: 12px; color: var(--primary-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Legal Guide</div>
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Understanding Gym Contracts: What to Look For</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Before signing on the dotted line, make sure you understand what you're agreeing to. 
+                        Learn about common contract terms, cancellation policies, and your rights as a member.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-size: 14px; color: var(--text-muted);">February 8, 2024</span>
+                        <span style="font-size: 14px; color: var(--text-muted);">5 min read</span>
+                    </div>
+                    <button class="btn-primary" style="width: 100%;">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more">
+            <button class="load-more-btn">Load More Articles</button>
+            <p class="results-count">Showing 6 of 20+ articles</p>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Stay Updated</h2>
+            <p>Get the latest fitness tips, gym reviews, and exclusive deals delivered to your inbox</p>
+            <div style="display: flex; gap: 12px; max-width: 500px; margin: 32px auto 0; flex-wrap: wrap; justify-content: center;">
+                <input type="email" placeholder="Your email address" style="flex: 1; min-width: 250px; padding: 16px 20px; background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 12px; color: var(--text-primary); font-size: 16px; outline: none;" onfocus="this.style.borderColor='var(--primary-accent)'" onblur="this.style.borderColor='var(--border-color)'">
+                <button class="cta-button" style="padding: 16px 32px;">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="logo.png" alt="Gym Finder" class="footer-logo">
+                    <p>Vancouver's most comprehensive gym comparison platform. Find, compare, and join your perfect fitness home.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘 Facebook</a>
+                        <a href="#" class="social-icon">📸 Instagram</a>
+                        <a href="#" class="social-icon">🐦 Twitter</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#gyms">Browse All Gyms</a></li>
+                        <li><a href="compare.html">Compare Prices</a></li>
+                        <li><a href="index.html#neighborhoods">By Neighborhood</a></li>
+                        <li><a href="index.html#amenities">By Amenities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Fitness Blog</a></li>
+                        <li><a href="index.html#guides">Gym Guides</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li>📧 info@gymfinder.ca</li>
+                        <li>📞 (604) 555-0123</li>
+                        <li>📍 Vancouver, BC</li>
+                        <li>⏰ Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gym Finder Vancouver. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

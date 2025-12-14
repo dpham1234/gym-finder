@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Gym Finder Vancouver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" style="display: flex; flex-direction: column; gap: 4px; text-decoration: none;">
+                    <img src="logo.png" alt="Gym Finder Logo" class="logo-img">
+                    <span class="tagline">Your Vancouver Fitness Guide</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#gyms" class="nav-link">Browse Gyms</a></li>
+                    <li><a href="compare.html" class="nav-link">Compare</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="cta-nav">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="gym4.jpeg" alt="Vancouver Gym" class="hero-bg">
+        <div class="hero-container">
+            <h1>Frequently Asked <span class="highlight">Questions</span></h1>
+            <p class="hero-lead">Everything you need to know about finding your perfect gym</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="gym-section">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <!-- FAQ Item 1 -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-card)'">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: var(--primary-accent);">How accurate is the pricing information?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+                        We regularly verify pricing information by contacting gyms directly and visiting their facilities. 
+                        However, prices can change, so we recommend confirming with the gym before signing up. 
+                        We update our database monthly to ensure accuracy.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-card)'">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: var(--primary-accent);">Do you charge a fee for using Gym Finder?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+                        No! Gym Finder is completely free to use. We don't charge users any fees. 
+                        Our revenue comes from partnerships with gyms who want to reach more members, 
+                        but this never affects our recommendations or comparisons.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-card)'">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: var(--primary-accent);">Can I book a gym membership through your site?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+                        Currently, we provide information and comparisons to help you make an informed decision. 
+                        To sign up for a membership, you'll need to contact the gym directly or visit their location. 
+                        We provide contact information and links to make this process as easy as possible.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-card)'">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: var(--primary-accent);">How often is the information updated?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+                        We update our database monthly, but we also rely on user feedback. If you notice any 
+                        inaccurate information, please report it through our contact form and we'll verify and 
+                        update it within 48 hours.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-card)'">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: var(--primary-accent);">Are the reviews verified?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+                        We verify reviews to ensure they come from actual gym members. We use a combination of 
+                        email verification and moderation to maintain the quality and authenticity of our review system. 
+                        Fake or spam reviews are removed immediately.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-card)'">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: var(--primary-accent);">My gym isn't listed. How can I add it?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+                        We're always looking to expand our directory! If you know of a gym that isn't listed, 
+                        please contact us through our contact form with the gym's name, location, and any information 
+                        you have. We'll research and add it to our database.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-card)'">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: var(--primary-accent);">Can I compare more than 3 gyms at once?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+                        Currently, our comparison tool allows you to compare up to 3 gyms side-by-side for optimal 
+                        readability. If you need to compare more gyms, you can create multiple comparison sets or 
+                        use our advanced filters to narrow down your options.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-accent)'; this.style.background='rgba(203, 211, 125, 0.05)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-card)'">
+                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: var(--primary-accent);">Do you have a mobile app?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+                        Not yet, but our website is fully responsive and optimized for mobile devices. 
+                        We're working on a mobile app that will be available in 2025. In the meantime, 
+                        you can bookmark our site on your mobile browser for easy access.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Still Have Questions CTA -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 48px; text-align: center; margin-top: 48px;">
+                <h3 style="font-size: 28px; font-weight: 700; margin-bottom: 16px;">Still Have Questions?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 18px;">
+                    Can't find what you're looking for? Our team is here to help!
+                </p>
+                <a href="contact.html" class="btn-primary" style="display: inline-block; text-decoration: none;">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="logo.png" alt="Gym Finder" class="footer-logo">
+                    <p>Vancouver's most comprehensive gym comparison platform. Find, compare, and join your perfect fitness home.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘 Facebook</a>
+                        <a href="#" class="social-icon">📸 Instagram</a>
+                        <a href="#" class="social-icon">🐦 Twitter</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#gyms">Browse All Gyms</a></li>
+                        <li><a href="compare.html">Compare Prices</a></li>
+                        <li><a href="index.html#neighborhoods">By Neighborhood</a></li>
+                        <li><a href="index.html#amenities">By Amenities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Fitness Blog</a></li>
+                        <li><a href="index.html#guides">Gym Guides</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li>📧 info@gymfinder.ca</li>
+                        <li>📞 (604) 555-0123</li>
+                        <li>📍 Vancouver, BC</li>
+                        <li>⏰ Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gym Finder Vancouver. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
