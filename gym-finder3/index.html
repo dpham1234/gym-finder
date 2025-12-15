@@ -14,7 +14,12 @@
                 <img src="logo.png" alt="Gym Finder Logo" class="logo-img">
                 <span class="tagline">Your Vancouver Fitness Guide</span>
             </div>
-            <nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html#gyms" class="nav-link">Browse Gyms</a></li>
                     <li><a href="compare.html" class="nav-link">Compare</a></li>
@@ -476,5 +481,25 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking nav links
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
