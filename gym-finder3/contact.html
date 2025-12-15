@@ -51,31 +51,36 @@
                     Fill out the form below and we'll get back to you within 24 hours.
                 </p>
                 
-                <form style="display: flex; flex-direction: column; gap: 24px;">
+                <form id="contactForm" style="display: flex; flex-direction: column; gap: 24px;">
                     <div>
-                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Name</label>
-                        <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
+                        <label for="name" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name" style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
+                        <div class="error-message" style="color: #ef4444; font-size: 14px; margin-top: 4px; display: none;"></div>
                     </div>
                     
                     <div>
-                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Email</label>
-                        <input type="email" placeholder="your.email@example.com" style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
+                        <label for="email" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com" style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
+                        <div class="error-message" style="color: #ef4444; font-size: 14px; margin-top: 4px; display: none;"></div>
                     </div>
                     
                     <div>
-                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Subject</label>
-                        <select style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; cursor: pointer; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
-                            <option>General Inquiry</option>
-                            <option>Gym Listing Request</option>
-                            <option>Report Inaccurate Information</option>
-                            <option>Partnership Opportunity</option>
-                            <option>Technical Support</option>
+                        <label for="subject" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Subject *</label>
+                        <select id="subject" name="subject" required style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; cursor: pointer; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="listing">Gym Listing Request</option>
+                            <option value="report">Report Inaccurate Information</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="support">Technical Support</option>
                         </select>
+                        <div class="error-message" style="color: #ef4444; font-size: 14px; margin-top: 4px; display: none;"></div>
                     </div>
                     
                     <div>
-                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Message</label>
-                        <textarea placeholder="Tell us how we can help..." rows="6" style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; resize: vertical; font-family: inherit; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'"></textarea>
+                        <label for="message" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us how we can help..." rows="6" style="width: 100%; padding: 14px 16px; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 16px; outline: none; resize: vertical; font-family: inherit; transition: all 0.3s ease;" onfocus="this.style.borderColor='var(--primary-accent)'; this.style.boxShadow='0 0 0 4px rgba(203, 211, 125, 0.1)'" onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'"></textarea>
+                        <div class="error-message" style="color: #ef4444; font-size: 14px; margin-top: 4px; display: none;"></div>
                     </div>
                     
                     <button type="submit" class="btn-primary" style="width: 100%; margin-top: 8px;">Send Message</button>
@@ -222,6 +227,85 @@
                 });
             });
         }
+        
+        // Form validation
+        const contactForm = document.getElementById('contactForm');
+        
+        function showError(field, message) {
+            const errorDiv = field.parentNode.querySelector('.error-message');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            field.style.borderColor = '#ef4444';
+        }
+        
+        function clearError(field) {
+            const errorDiv = field.parentNode.querySelector('.error-message');
+            errorDiv.style.display = 'none';
+            field.style.borderColor = 'var(--border-color)';
+        }
+        
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const subject = document.getElementById('subject');
+            const message = document.getElementById('message');
+            
+            let isValid = true;
+            
+            // Clear previous errors
+            [name, email, subject, message].forEach(clearError);
+            
+            // Validate name
+            if (!name.value.trim()) {
+                showError(name, 'Name is required');
+                isValid = false;
+            }
+            
+            // Validate email
+            if (!email.value.trim()) {
+                showError(email, 'Email is required');
+                isValid = false;
+            } else if (!validateEmail(email.value)) {
+                showError(email, 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            // Validate subject
+            if (!subject.value) {
+                showError(subject, 'Please select a subject');
+                isValid = false;
+            }
+            
+            // Validate message
+            if (!message.value.trim()) {
+                showError(message, 'Message is required');
+                isValid = false;
+            } else if (message.value.trim().length < 10) {
+                showError(message, 'Message must be at least 10 characters long');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                alert('Thank you for your message! We will get back to you within 24 hours.');
+                contactForm.reset();
+            }
+        });
+        
+        // Real-time validation
+        document.getElementById('email').addEventListener('blur', function() {
+            if (this.value && !validateEmail(this.value)) {
+                showError(this, 'Please enter a valid email address');
+            } else if (this.value) {
+                clearError(this);
+            }
+        });
     </script>
 </body>
 </html>
