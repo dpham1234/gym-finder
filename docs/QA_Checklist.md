@@ -141,6 +141,6 @@
 
 ## Sign-off
 
-**QA Team Lead:** ________________  
+**QA Team Lead:** Dat Pham
 **Date:** December 2024  
 **Status:** ✅ PASSED - Ready for deployment
