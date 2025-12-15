@@ -890,7 +890,74 @@ footer {
     }
 }
 
+@media (max-width: 1024px) {
+    /* Tablet comparison table improvements */
+    table {
+        font-size: 14px;
+    }
+    
+    table th, table td {
+        padding: 16px 12px !important;
+    }
+    
+    table th img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    table th div:first-child {
+        margin-bottom: 8px !important;
+    }
+    
+    /* Improve touch targets */
+    .btn-primary {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    /* Better horizontal scroll */
+    div[style*="overflow-x: auto"] {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+    
+    div[style*="overflow-x: auto"]::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    div[style*="overflow-x: auto"]::-webkit-scrollbar-track {
+        background: var(--bg-light);
+        border-radius: 4px;
+    }
+    
+    div[style*="overflow-x: auto"]::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 4px;
+    }
+    
+    div[style*="overflow-x: auto"]::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-accent);
+    }
+}
+
 @media (max-width: 768px) {
+    /* Mobile comparison table */
+    table {
+        font-size: 12px;
+    }
+    
+    table th, table td {
+        padding: 12px 8px !important;
+    }
+    
+    table th {
+        font-size: 14px;
+    }
+    
+    table th img {
+        width: 50px !important;
+        height: 50px !important;
+    }
     .header-container {
         padding: 20px;
         position: relative;
