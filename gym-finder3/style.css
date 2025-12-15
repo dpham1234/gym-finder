@@ -846,7 +846,7 @@ footer {
 
 .footer-col a:hover {
     color: var(--primary-accent);
-    padding-left: 4px;
+    transform: translateX(4px);
 }
 
 .contact-list li {
