@@ -15,7 +15,12 @@
                     <span class="tagline">Your Vancouver Fitness Guide</span>
                 </a>
             </div>
-            <nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html#gyms" class="nav-link">Browse Gyms</a></li>
                     <li><a href="compare.html" class="nav-link">Compare</a></li>
@@ -206,13 +211,44 @@
             <div class="footer-bottom">
                 <p>&copy; 2024 Gym Finder Vancouver. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                    <a href="#cookies">Cookie Policy</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
                 </div>
             </div>
         </div>
     </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking nav links
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Set active navigation state
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link, .cta-nav');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').split('#')[0];
+            if (linkPage === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>
 

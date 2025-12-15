@@ -11,8 +11,10 @@
     <header>
         <div class="header-container">
             <div class="logo-section">
-                <img src="logo.png" alt="Gym Finder Logo" class="logo-img">
-                <span class="tagline">Your Vancouver Fitness Guide</span>
+                <a href="index.html" style="display: flex; flex-direction: column; gap: 4px; text-decoration: none;">
+                    <img src="logo.png" alt="Gym Finder Logo" class="logo-img">
+                    <span class="tagline">Your Vancouver Fitness Guide</span>
+                </a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
@@ -669,6 +671,17 @@
         });
         
         document.body.insertBefore(skipLink, document.body.firstChild);
+        
+        // Set active navigation state
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link, .cta-nav');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').split('#')[0];
+            if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
         
         // Performance optimization: Intersection Observer for lazy loading
         if ('IntersectionObserver' in window) {

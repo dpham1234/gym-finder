@@ -125,6 +125,17 @@ header {
     outline-offset: 2px;
 }
 
+.nav-link.active {
+    color: var(--primary-accent);
+    background: rgba(203, 211, 125, 0.15);
+    font-weight: 600;
+}
+
+.cta-nav.active {
+    background: var(--accent-hover);
+    box-shadow: 0 4px 15px rgba(203, 211, 125, 0.2);
+}
+
 .cta-nav {
     padding: 12px 28px;
     background: var(--primary-accent);
