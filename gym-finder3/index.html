@@ -75,28 +75,28 @@
     <section class="filter-bar">
         <div class="filter-container">
             <span class="filter-label">Filter by:</span>
-            <select class="filter-select">
-                <option>All Neighborhoods</option>
-                <option>Downtown</option>
-                <option>Yaletown</option>
-                <option>Mount Pleasant</option>
-                <option>North Vancouver</option>
+            <select class="filter-select" aria-label="Filter by neighborhood" role="combobox">
+                <option value="">All Neighborhoods</option>
+                <option value="downtown">Downtown</option>
+                <option value="yaletown">Yaletown</option>
+                <option value="mount-pleasant">Mount Pleasant</option>
+                <option value="north-vancouver">North Vancouver</option>
             </select>
-            <select class="filter-select">
-                <option>Price Range</option>
-                <option>Under $20/month</option>
-                <option>$20-$50/month</option>
-                <option>$50-$100/month</option>
-                <option>$100+/month</option>
+            <select class="filter-select" aria-label="Filter by price range" role="combobox">
+                <option value="">Price Range</option>
+                <option value="under-20">Under $20/month</option>
+                <option value="20-50">$20-$50/month</option>
+                <option value="50-100">$50-$100/month</option>
+                <option value="100-plus">$100+/month</option>
             </select>
-            <select class="filter-select">
-                <option>Amenities</option>
-                <option>Pool</option>
-                <option>Sauna</option>
-                <option>Group Classes</option>
-                <option>Personal Training</option>
+            <select class="filter-select" aria-label="Filter by amenities" role="combobox">
+                <option value="">Amenities</option>
+                <option value="pool">Pool</option>
+                <option value="sauna">Sauna</option>
+                <option value="classes">Group Classes</option>
+                <option value="training">Personal Training</option>
             </select>
-            <button class="reset-filters">Reset Filters</button>
+            <button class="reset-filters" aria-label="Reset all filters" role="button">Reset Filters</button>
         </div>
     </section>
 
@@ -597,6 +597,78 @@
                 filterGyms(searchTerm);
             });
         });
+        
+        // Keyboard accessibility for filters
+        const filterSelects = document.querySelectorAll('.filter-select');
+        const resetButton = document.querySelector('.reset-filters');
+        
+        // Enhanced keyboard navigation
+        filterSelects.forEach(select => {
+            select.addEventListener('keydown', function(e) {
+                // Allow Escape to close dropdown and move focus
+                if (e.key === 'Escape') {
+                    this.blur();
+                    searchInput.focus();
+                }
+                
+                // Tab navigation enhancement
+                if (e.key === 'Tab' && !e.shiftKey) {
+                    // Normal tab behavior, but ensure proper focus order
+                }
+            });
+            
+            // Announce changes to screen readers
+            select.addEventListener('change', function() {
+                const selectedText = this.options[this.selectedIndex].text;
+                const announcement = `Filter changed to ${selectedText}`;
+                
+                // Create temporary announcement for screen readers
+                const announcement_div = document.createElement('div');
+                announcement_div.setAttribute('aria-live', 'polite');
+                announcement_div.setAttribute('aria-atomic', 'true');
+                announcement_div.style.position = 'absolute';
+                announcement_div.style.left = '-10000px';
+                announcement_div.textContent = announcement;
+                
+                document.body.appendChild(announcement_div);
+                setTimeout(() => {
+                    document.body.removeChild(announcement_div);
+                }, 1000);
+            });
+        });
+        
+        // Reset button keyboard handling
+        resetButton.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+        
+        // Add skip link functionality
+        const skipLink = document.createElement('a');
+        skipLink.href = '#gyms';
+        skipLink.textContent = 'Skip to main content';
+        skipLink.style.position = 'absolute';
+        skipLink.style.top = '-40px';
+        skipLink.style.left = '6px';
+        skipLink.style.background = 'var(--primary-accent)';
+        skipLink.style.color = 'var(--bg-dark)';
+        skipLink.style.padding = '8px';
+        skipLink.style.textDecoration = 'none';
+        skipLink.style.borderRadius = '4px';
+        skipLink.style.zIndex = '1000';
+        skipLink.style.transition = 'top 0.3s';
+        
+        skipLink.addEventListener('focus', function() {
+            this.style.top = '6px';
+        });
+        
+        skipLink.addEventListener('blur', function() {
+            this.style.top = '-40px';
+        });
+        
+        document.body.insertBefore(skipLink, document.body.firstChild);
     </script>
 </body>
 </html>
