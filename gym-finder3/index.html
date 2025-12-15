@@ -44,8 +44,8 @@
                     <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM18 18l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                    <input type="text" placeholder="Search gyms, neighborhoods, or activities...">
-                    <button class="search-btn">Search</button>
+                    <input type="text" id="searchInput" placeholder="Search gyms, neighborhoods, or activities...">
+                    <button type="button" class="search-btn" onclick="performSearch()">Search</button>
                 </div>
                 <div class="quick-filters">
                     <button class="filter-tag">🏊 With Pool</button>
@@ -413,7 +413,15 @@
 
         <div class="load-more">
             <button class="load-more-btn">Load More Gyms</button>
-            <p class="results-count">Showing 6 of 50+ gyms</p>
+            <p class="results-count" id="resultsCount">Showing 6 of 50+ gyms</p>
+        </div>
+        
+        <!-- Empty State -->
+        <div id="emptyState" style="display: none; text-align: center; padding: 60px 20px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; margin-top: 32px;">
+            <div style="font-size: 64px; margin-bottom: 24px;">🔍</div>
+            <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">No gyms found</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">Try adjusting your search terms or browse all gyms.</p>
+            <button onclick="clearSearch()" class="btn-primary">Clear Search</button>
         </div>
     </section>
 
@@ -500,6 +508,95 @@
                 });
             });
         }
+        
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const gymCards = document.querySelectorAll('.gym-card');
+        const resultsCount = document.getElementById('resultsCount');
+        const emptyState = document.getElementById('emptyState');
+        const loadMoreSection = document.querySelector('.load-more');
+        
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            filterGyms(searchTerm);
+        }
+        
+        function filterGyms(searchTerm) {
+            let visibleCount = 0;
+            
+            gymCards.forEach(card => {
+                const gymName = card.querySelector('h3').textContent.toLowerCase();
+                const location = card.querySelector('.location').textContent.toLowerCase();
+                const amenities = Array.from(card.querySelectorAll('.amenity-tag'))
+                    .map(tag => tag.textContent.toLowerCase()).join(' ');
+                
+                const searchableText = `${gymName} ${location} ${amenities}`;
+                
+                if (searchTerm === '' || searchableText.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            updateResultsDisplay(visibleCount, searchTerm);
+        }
+        
+        function updateResultsDisplay(visibleCount, searchTerm) {
+            if (visibleCount === 0 && searchTerm !== '') {
+                emptyState.style.display = 'block';
+                loadMoreSection.style.display = 'none';
+                resultsCount.textContent = 'No results found';
+            } else {
+                emptyState.style.display = 'none';
+                loadMoreSection.style.display = 'block';
+                
+                if (searchTerm === '') {
+                    resultsCount.textContent = 'Showing 6 of 50+ gyms';
+                } else {
+                    resultsCount.textContent = `Found ${visibleCount} gym${visibleCount !== 1 ? 's' : ''} matching "${searchTerm}"`;
+                }
+            }
+        }
+        
+        function clearSearch() {
+            searchInput.value = '';
+            filterGyms('');
+            searchInput.focus();
+        }
+        
+        // Real-time search
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            filterGyms(searchTerm);
+        });
+        
+        // Search on Enter key
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        // Quick filter functionality
+        document.querySelectorAll('.filter-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                const filterText = this.textContent.toLowerCase();
+                let searchTerm = '';
+                
+                if (filterText.includes('pool')) {
+                    searchTerm = 'pool';
+                } else if (filterText.includes('under')) {
+                    searchTerm = 'fit4less';
+                } else if (filterText.includes('24/7')) {
+                    searchTerm = '24/7';
+                }
+                
+                searchInput.value = searchTerm;
+                filterGyms(searchTerm);
+            });
+        });
     </script>
 </body>
 </html>
