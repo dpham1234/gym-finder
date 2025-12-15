@@ -3,18 +3,18 @@
  */
 
 :root {
-    --primary-accent: #cbd37d;
-    --accent-hover: #dce391;
-    --accent-dark: #9ba85a;
+    --primary-accent: #d4db85;
+    --accent-hover: #e0e79a;
+    --accent-dark: #a8b562;
     --bg-dark: #0a0a0a;
     --bg-card: #151515;
     --bg-light: #1f1f1f;
     --text-primary: #ffffff;
-    --text-secondary: #a8a8a8;
-    --text-muted: #6b6b6b;
+    --text-secondary: #b8b8b8;
+    --text-muted: #888888;
     --border-color: #2d2d2d;
-    --success: #4ade80;
-    --warning: #fbbf24;
+    --success: #22c55e;
+    --warning: #f59e0b;
 }
 
 * {
